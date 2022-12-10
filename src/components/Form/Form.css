@@ -1,0 +1,23 @@
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form input[type="text"] {
+    height: 30px;
+    border-radius: 5px;
+    min-width: 80%;
+    font-size: 14pt;
+}
+.form button[type="submit"]{
+    height: 30px;
+    width: 30px;
+    background-color: rgb(188, 138, 73);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form button[type="submit"]:hover{
+    background-color: rgb(19, 110, 80);
+}
