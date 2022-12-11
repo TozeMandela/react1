@@ -3,14 +3,14 @@
 /* eslint-disable react/no-unused-state */
 import React, { Component } from 'react';
 import './Main.css';
-import { FaEdit, FaWindowClose } from 'react-icons/fa';
 import Form from './Form';
+import Tarefa from './Tarefa';
 
 export default class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      novaTarefa: ' ',
+      novaTarefa: '',
       tarefas: [],
       index: -1,
     };
@@ -85,29 +85,20 @@ export default class Main extends Component {
   };
 
   render() {
+    const { novaTarefa } = this.state;
     return (
       <div className="main">
         <h1>Lista de Tarefa</h1>
         <Form
           handleSubmit={this.handleSubmit}
           handlechaneswords={this.handlechaneswords}
-          state={this.state.novaTarefa}
+          novaTarefa={novaTarefa}
         />
-
-        <div className="tarefas">
-          <ul>
-            {this.state.tarefas.map((tarefa, index) => (
-              <li key={tarefa}>
-                {tarefa}
-                <div className="controller">
-                  <FaEdit onClick={(e) => this.handleEdite(e, index)} className="btnEdit" />
-
-                  <FaWindowClose onClick={(e) => this.handleDelete(e, index)} className="btnClose" />
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <Tarefa
+          tarefas={this.state.tarefas}
+          handleEdite={this.handleEdite}
+          handleDelete={this.handleDelete}
+        />
       </div>
     );
   }

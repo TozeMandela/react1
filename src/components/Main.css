@@ -11,33 +11,3 @@
     text-align: center;
     margin: 20px 0px 20px 0px;
 }
-.tarefas{
-    margin: 15px 40px;
-    font-size: 20px;
-}
-.tarefas li{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px; 
-    display: flex;
-    align-items: center;
-}
-.tarefas li .controller *{
-    margin-left: 10px;
-}
-li:hover{
-background-color: rgb(111, 216, 25);
-transition: all 600ms;
-
-}
-.tarefas li .controller .btnEdit:hover{
-    color: rgb(188, 138, 73);
-    transition: all 600ms;
-    cursor: pointer;
-}
-.tarefas li .controller .btnClose:hover{
-    color: rgb(242, 12, 20);
-    background-color: aliceblue;
-    transition: all 600ms;
-    cursor: pointer;
-}
